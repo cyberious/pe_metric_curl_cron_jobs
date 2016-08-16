@@ -25,7 +25,7 @@ define pe_metric_curl_cron_jobs::pe_metric (
   }
 
   cron { "${metrics_type}_metrics_collection" :
-    command => $script_file_name,
+    command => "${script_file_name} 2>&1",
     user    => 'root',
     minute  => $cron_minute,
   }
