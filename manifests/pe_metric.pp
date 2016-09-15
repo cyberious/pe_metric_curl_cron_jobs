@@ -39,6 +39,7 @@ define pe_metric_curl_cron_jobs::pe_metric (
                     'tidy_age'   => $tidy_age,
                   }),
     user    => 'root',
+    minute  => '0',
     hour    => '2',
   }
 }
